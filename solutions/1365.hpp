@@ -1,7 +1,6 @@
 #ifndef _SOL_1365_HPP_
 #define _SOL_1365_HPP_
 
-#include <vector>
 #include "include/helper.hpp"
 
 class Solution {
@@ -22,21 +21,21 @@ public:
 	}
 
 	bool test(std::vector<int> in, std::vector<int> expected) {
-		static unsigned i = 1;
+		static unsigned testNumber = 1;
+		Stopwatch timer;
+		timer.start();
 		std::vector<int> out = smallerNumbersThanCurrent(in);
+		timer.stop();
+		std::cout << "Test #" << testNumber++;
 		if (out == expected) {
-			std::cout << "Test #"       << i++ << " PASSED" << std::endl;
+			std::cout << " PASSED [" << timer.report() << "s]" << std::endl;
 			return true;
 		}
-		else {
-			std::cout << "Test #"       << i++ << " FAILED" << std::endl;
-			std::cout << "\tInput:    " << in << std::endl;
-			std::cout << "\tOutput:   " << smallerNumbersThanCurrent(in) << std::endl;
-			std::cout << "\tExpected: " << expected << std::endl;
-			return false;
-		}
-		++i;
-		return true;
+		std::cout << " FAILED ["    << timer.report() << "s]" << std::endl;
+		std::cout << "\tInput:    " << in << std::endl;
+		std::cout << "\tOutput:   " << smallerNumbersThanCurrent(in) << std::endl;
+		std::cout << "\tExpected: " << expected << std::endl;
+		return false;
 	}
 
 	bool runTests() {
