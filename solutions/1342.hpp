@@ -1,5 +1,5 @@
-#ifndef _SOL_1342_HPP_
-#define _SOL_1342_HPP_
+#ifndef _LEET_SOLUTION_HPP_
+#define _LEET_SOLUTION_HPP_
 
 #include "include/helper.hpp"
 
@@ -49,4 +49,4 @@ public:
 	}
 };
 
-#endif // _SOL_1342_HPP_
+#endif // _LEET_SOLUTION_HPP_
