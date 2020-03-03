@@ -33,7 +33,7 @@ public:
 		}
 		std::cout << " FAILED ["    << timer.report() << "s]" << std::endl;
 		std::cout << "\tInput:    " << in << std::endl;
-		std::cout << "\tOutput:   " << smallerNumbersThanCurrent(in) << std::endl;
+		std::cout << "\tOutput:   " << out << std::endl;
 		std::cout << "\tExpected: " << expected << std::endl;
 		return false;
 	}

@@ -37,6 +37,6 @@ std::ostream& operator<<(std::ostream& out, const std::vector<T>& vec) {
 	}
 	out << " ]";
 	return out; 
-} 
+}
 
 #endif // _LEET_HELPER_HPP_
